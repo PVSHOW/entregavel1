@@ -1,0 +1,26 @@
+.clean{
+    background: transparent;
+    border: none;
+}
+.solid{
+    background: white;
+    border: none;
+}
+.p1{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+.erro{
+    color: white;
+    background: red;
+    display: none;
+}
+button[disabled]{
+    opacity: 0.7;
+}
+
+
+button:active{
+    opacity: 0.5;
+}
