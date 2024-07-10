@@ -9,10 +9,28 @@ function onChangePassword() {
 }
 
 function login1() {
-    window.location.href = "C:/Users/samys/OneDrive/Documentos/GitHub/JAVASCRIPT/aula04/home/home.html"; // Corrigido para window.location.href
+
+  
+    firebase.auth().signInWithEmailAndPassword(
+        form.email().value, form.password().value
+    ).then(response => {
+        window.location.href = "C:/Users/samys/OneDrive/Documentos/GitHub/JAVASCRIPT/aula04/home/home.html";
+    }).catch(error => {
+        alert(getErrorMessage(error));
+    });
+   
+
 }
 
-function register(){
+
+function getErrorMessage(error){
+    if(error.code == "auth/invalid-credential"){
+        return "Usuario não encontrado";
+    }
+    return error.message;
+}
+
+function register() {
     window.location.href = "C:/Users/samys/OneDrive/Documentos/GitHub/JAVASCRIPT/aula04/register/register.html";
 }
 
