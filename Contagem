@@ -1,0 +1,17 @@
+public class Contagem {
+    public static int contar(int[] conjunto, int N) {
+        int contagem = 0;
+        for (int num : conjunto) {
+            if (num >= conjunto[0] && num <= N) {
+                contagem++;
+            }
+        }
+        return contagem;
+    }
+
+    public static void main(String[] args) {
+        int[] conjunto = {5, 2, 9, 1, 5, 6};
+        int N = 5;
+        System.out.println("Quantidade de valores entre " + conjunto[0] + " e " + N + ": " + contar(conjunto, N));
+    }
+}
